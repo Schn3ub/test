@@ -1,11 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
-import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     LoginModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
