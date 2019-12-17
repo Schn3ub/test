@@ -12,12 +12,22 @@ import { PrestationService } from '../../services/prestation.service';
 export class PagePrestationComponent implements OnInit {
   public collection$: Observable<Prestation[]>;
   public collection: Prestation[];
+  public header: string[];
   constructor(private ps: PrestationService) { }
 
   ngOnInit() {
     this.ps.collection.subscribe((data) => {
       this.collection = data;
     });
+    this.header = [
+      'Type',
+      'Client',
+      'NbJours',
+      'Tjm HT',
+      'Total HT',
+      'Total TTC',
+      'State',
+    ]
   }
 
 }

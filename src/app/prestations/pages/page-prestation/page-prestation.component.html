@@ -2,23 +2,18 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Type</th>
-        <th scope="col">Client</th>
-        <th scope="col">NbJours</th>
-        <th scope="col">Tjm HT</th>
-        <th scope="col">Total HT</th>
-        <th scope="col">Total TTC</th>
-        <th scope="col">State</th>
+        <th *ngFor="let itemPlus of header" scope="col">{{ itemPlus }}</th>
       </tr>
     </thead>
     <tbody>
+      <!-- {{collection | json }} -->
       <tr *ngFor="let itemNikki of collection">
         <td>{{ itemNikki.typePresta }}</td>
         <td>{{ itemNikki.client }}</td>
         <td>{{ itemNikki.nbJours }}</td>
-        <td>{{ itemNikki.tjmHt }}</td>
-        <td>{{ itemNikki.totalHt() }}</td>
-        <td>{{ itemNikki.totalTtc() }}</td>
+        <td>{{ itemNikki.tjmHt | currency: 'EUR' }}</td>
+        <td>{{ itemNikki | total | currency: 'EUR' }}</td>
+        <td>{{ itemNikki | total: 'ttc' | currency: 'EUR' }}</td>
         <td>{{ itemNikki.state }}</td>
       </tr>
     </tbody>
