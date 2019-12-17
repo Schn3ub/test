@@ -14,7 +14,12 @@
         <td>{{ itemNikki.tjmHt | currency: 'EUR' }}</td>
         <td>{{ itemNikki | total | currency: 'EUR' }}</td>
         <td>{{ itemNikki | total: 'ttc' | currency: 'EUR' }}</td>
-        <td>{{ itemNikki.state }}</td>
+        <!-- <td>{{ itemNikki.state }}</td> -->
+        <td [appState]='itemNikki.state'>
+          <select>
+            <option *ngFor="let state of states | keyvalue" [value]="state.value" [selected]="state.value === itemNikki.state">{{ state.value }}</option>
+          </select>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TotalPipe } from './pipes/total.pipe';
+import { StateDirective } from './derectives/state.directive';
 
 
 
 @NgModule({
-  declarations: [TotalPipe],
+  declarations: [TotalPipe, StateDirective],
   imports: [
     CommonModule
   ],
-  exports: [TotalPipe]
+  exports: [TotalPipe, StateDirective]
 })
 export class SharedModule { }

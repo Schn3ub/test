@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { PrestationI } from 'src/app/shared/interfaces/prestation-i';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationService } from '../../services/prestation.service';
+import { State } from 'src/app/shared/enums/state.enum';
 
 @Component({
   selector: 'app-page-prestation',
@@ -13,6 +14,7 @@ export class PagePrestationComponent implements OnInit {
   public collection$: Observable<Prestation[]>;
   public collection: Prestation[];
   public header: string[];
+  public states = State;
   constructor(private ps: PrestationService) { }
 
   ngOnInit() {
