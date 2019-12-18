@@ -8,12 +8,12 @@ export class StateDirective {
   @HostBinding('class') tdClass: string;
   constructor() {
   }
-  ngOnInit() {
+  ngOnChanges() {
     console.log(this.appState);
     this.tdClass = this.formatClass(this.appState);
   }
   private formatClass(state: any): string {
-    // pour supp espace et accents
+    // pour supp espace et accents et minuscule
     return `state-${state.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '').toLowerCase()}`;
   }
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageClientComponent } from './page-client-list.component';
+import { TableauDarkComponent } from './tableau-dark.component';
 
-describe('PageClientListComponent', () => {
-  let component: PageClientComponent;
-  let fixture: ComponentFixture<PageClientComponent>;
+describe('TableauDarkComponent', () => {
+  let component: TableauDarkComponent;
+  let fixture: ComponentFixture<TableauDarkComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageClientComponent ]
+      declarations: [ TableauDarkComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageClientComponent);
+    fixture = TestBed.createComponent(TableauDarkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

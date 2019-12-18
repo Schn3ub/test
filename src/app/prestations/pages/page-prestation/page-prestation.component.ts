@@ -13,7 +13,9 @@ import { State } from 'src/app/shared/enums/state.enum';
 export class PagePrestationComponent implements OnInit {
   public collection$: Observable<Prestation[]>;
   public collection: Prestation[];
-  public header: string[];
+  public headers: string[];
+  public title: string;
+  public subtitle: string;
   public states = State;
   constructor(private ps: PrestationService) { }
 
@@ -21,7 +23,7 @@ export class PagePrestationComponent implements OnInit {
     this.ps.collection.subscribe((data) => {
       this.collection = data;
     });
-    this.header = [
+    this.headers = [
       'Type',
       'Client',
       'NbJours',
@@ -29,7 +31,18 @@ export class PagePrestationComponent implements OnInit {
       'Total HT',
       'Total TTC',
       'State',
-    ]
+    ];
+
+    this.title = 'Prestations';
+    this.subtitle = 'Toutes les prestations';
+  }
+
+  changeState(itemNikki: Prestation, event) {
+    // console.log(event.target.value);
+    this.ps.update(itemNikki, event.target.value).subscribe((res: Prestation) => {
+      // console.log(res);
+      itemNikki.state = res.state;
+    });
   }
 
 }

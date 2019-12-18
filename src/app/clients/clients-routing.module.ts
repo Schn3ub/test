@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageClientListComponent } from './pages/page-client-list/page-client-list.component';
+import { PageClientComponent } from './pages/page-client-list/page-client-list.component';
 
 const routes: Routes = [
-  { path: '', component: PageClientListComponent }
+  { path: '', component: PageClientComponent }
 ];
 
 @NgModule({

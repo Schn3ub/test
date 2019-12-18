@@ -1,9 +1,40 @@
 {
   "prestations": [
-    { "id": 1, "typePresta": "Formation", "client": "Modis", "tjmHt": 1200, "nbJours": 10, "tva": 20, "state": "Option" },
-    { "id": 2, "typePresta": "Coaching", "client": "Capgemini", "tjmHt": 1200, "nbJours": 20, "tva": 20, "state": "Confirmé" }
+    {
+      "id": 1,
+      "typePresta": "Formation",
+      "client": "Modis",
+      "tjmHt": 1200,
+      "nbJours": 10,
+      "tva": 20,
+      "state": "Option"
+    },
+    {
+      "id": 2,
+      "typePresta": "Coaching",
+      "client": "Capgemini",
+      "tjmHt": 1200,
+      "nbJours": 20,
+      "tva": 20,
+      "state": "Annulé"
+    }
   ],
   "clients": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "name": "donald",
+      "email": "donal@donald.com",
+      "image": "./.",
+      "state": "Inactif",
+      "sate": "Actif"
+    },
+    {
+      "id": 2,
+      "name": "remy",
+      "email": "remy@donald.com",
+      "image": "string",
+      "state": "Inactif",
+      "sate": "Inactif"
+    }
   ]
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageClientComponent } from './page-client-list.component';
+import { TableauLightComponent } from './tableau-light.component';
 
-describe('PageClientListComponent', () => {
-  let component: PageClientComponent;
-  let fixture: ComponentFixture<PageClientComponent>;
+describe('TableauLightComponent', () => {
+  let component: TableauLightComponent;
+  let fixture: ComponentFixture<TableauLightComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageClientComponent ]
+      declarations: [ TableauLightComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageClientComponent);
+    fixture = TestBed.createComponent(TableauLightComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
