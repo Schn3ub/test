@@ -1,6 +1,18 @@
 @import "theme";
-
-.tableau-light{
+.tableau-light {
+  .state-inactif {
+    background: $color-error;
+  }
+  .state-actif {
+    background: $color-success;
+  }
+  img {
+    width: 80px;
+    // height: 80px;
+  }
+  td {
+    vertical-align: middle;
+  }
   .state-annule {
     background: $color-error;
   }
@@ -10,24 +22,18 @@
   .state-confirme {
     background: $color-success;
   }
-  .state-inactif {
-    background: $color-error;
-  }
-  .state-actif {
-    background: $color-success;
+}
+app-template-a {
+  .tableau-light {
+    .state-option {
+      background: $color2;
+    }
   }
 }
-  app-template-a {
-    .tableau-light {
-      .state-option {
-        background: $color2;
-      }
+app-template-b {
+  .tableau-light {
+    .state-option {
+      background: $color1;
     }
   }
-  app-template-b {
-    .tableau-light {
-      .state-option {
-        background: $color1;
-      }
-    }
-  }
+}

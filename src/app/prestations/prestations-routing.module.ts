@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PagePrestationComponent } from './pages/page-prestation/page-prestation.component';
+import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
+import { PageAddPrestationComponent } from './pages/page-prestations/page-add-prestation/page-add-prestation.component';
 
 const routes: Routes = [
-  { path: '', component: PagePrestationComponent }
+  { path: '',
+  component: PagePrestationsComponent,
+  data: {title: 'prestation', subtitle: 'Toutes les prestations' }
+},
+{ path: 'add',
+  component: PageAddPrestationComponent,
+  data: {title: 'prestation', subtitle: 'Ajouter prestations' }
+}
 ];
 
 @NgModule({

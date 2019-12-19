@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { State } from 'src/app/shared/enums/state.enum';
 import { Client } from 'src/app/shared/models/client';
 import { ClientService } from '../../services/client.service';
 import { Stateclient } from 'src/app/shared/enums/stateclient.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-client',
@@ -17,9 +17,17 @@ export class PageClientComponent implements OnInit {
   public states = Stateclient;
   title: string;
   subtitle: string;
-  constructor(private ps: ClientService) { }
+  constructor(
+    private ps: ClientService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+    this.route.data.subscribe((datas) => {
+      console.log();
+      this.title = 'Clients';
+      this.subtitle = 'Tous les clients';
+    });
     this.ps.collection.subscribe((data) => {
       this.collection = data;
     });
@@ -29,8 +37,7 @@ export class PageClientComponent implements OnInit {
       'Image',
       'state',
     ];
-    this.title = 'Clients';
-    this.subtitle = 'Tous les clients';
+
   }
 
   changeState(itemNikki: Client, event) {

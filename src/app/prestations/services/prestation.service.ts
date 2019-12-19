@@ -49,6 +49,10 @@ public update(item: Prestation, state: State) {
   return this.http.patch(`${this.urlApi}/prestations/${item.id}`, obj);
 }
 
+public add(item: Prestation){
+  return this.http.post(`${this.urlApi}/prestations`, item);
+}
+
 /* this.obs2$.subscribe((data) => {
   console.log(data);
 });

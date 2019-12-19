@@ -47,4 +47,12 @@ public update(item: Client, state: Stateclient) {
   obj.state = state;
   return this.http.patch(`${this.urlApi}/Clients/${item.id}`, obj);
 }
+
+// add item in collection
+public add(item: any) {
+  console.log(item.image);
+  item.image = item.image.replace('C:\\fakepath\\', '../../../assets/img/');
+  return this.http.post(`${this.urlApi}/clients`, item);
+}
+
 }

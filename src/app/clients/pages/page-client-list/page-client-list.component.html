@@ -4,7 +4,7 @@
     <tr *ngFor="let itemNikki of collection">
       <td>{{ itemNikki.name }}</td>
       <td>{{ itemNikki.email }}</td>
-      <td>{{ itemNikki.image }}</td>
+      <td> <img [src]="itemNikki.image" [alt]="itemNikki.name"></td>
       <td [appState]="itemNikki.state">
         <select (change)="changeState(itemNikki, $event)">
           <option *ngFor="let state of states | keyvalue" [value]="state.value"
@@ -14,4 +14,7 @@
     </tr>
   </app-tableau-dark>
 
+  <app-button label="Ajouter un client" route="add"></app-button>
+
 </app-template-a>
+

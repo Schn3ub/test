@@ -7,7 +7,7 @@
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "Option"
+      "state": "Annulé"
     },
     {
       "id": 2,
@@ -16,7 +16,61 @@
       "tjmHt": 1200,
       "nbJours": 20,
       "tva": 20,
-      "state": "Annulé"
+      "state": "Option"
+    },
+    {
+      "typePresta": null,
+      "client": null,
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Confirmé",
+      "id": 3
+    },
+    {
+      "typePresta": "Alithya",
+      "client": "tof",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "id": 4
+    },
+    {
+      "typePresta": "Alithya",
+      "client": "tof",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "id": 5
+    },
+    {
+      "typePresta": "Alithya",
+      "client": "to",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "id": 6
+    },
+    {
+      "typePresta": "Alithya",
+      "client": "tof3",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "id": 7
+    },
+    {
+      "typePresta": "kk",
+      "client": "dff",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "id": 8
     }
   ],
   "clients": [
@@ -24,17 +78,22 @@
       "id": 1,
       "name": "donald",
       "email": "donal@donald.com",
-      "image": "./.",
-      "state": "Inactif",
-      "sate": "Actif"
+      "image": "../../../assets/img/melvin.JPG",
+      "state": "Actif"
     },
     {
       "id": 2,
       "name": "remy",
       "email": "remy@donald.com",
-      "image": "string",
-      "state": "Inactif",
-      "sate": "Inactif"
+      "image": "../../../assets/img/melvin.JPG",
+      "state": "Actif"
+    },
+    {
+      "name": "jj",
+      "email": "ddg",
+      "image": "../../../assets/img/melvin.JPG",
+      "state": "Actif",
+      "id": 3
     }
   ]
 }
