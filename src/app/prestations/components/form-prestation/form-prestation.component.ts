@@ -32,6 +32,7 @@ export class FormPrestationComponent implements OnInit {
       tjmHt: [this.init.tjmHt],
       nbJours: [this.init.nbJours],
       tva: [this.init.tva],
+      comments: [this.init.comments],
       state: [this.init.state]
     });
   }

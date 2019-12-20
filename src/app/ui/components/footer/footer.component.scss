@@ -1,11 +1,16 @@
 @import 'theme';
 @import 'font';
 img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
-h1 {
-  text-align: right;
-  color: $dark-color;
-  font-size: $regular-fz;
+p {
+  text-align: center;
+  color: $color1;
+  font-size: $h2-fz;
+  font-weight: bold;
+  padding-top: 15px;
+}
+fa-icon {
+  color: $color-error;
 }

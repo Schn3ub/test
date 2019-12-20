@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onClick()">
+
+  <div class="form-group">
+    <label for="login">Type presta</label>
+    <input formControlName='login' type="text" class="form-control" id="login">
+    <div class="alert alert-danger" *ngIf="form.get('login').invalid && form.get('login').touched">champ invalid</div>
+  </div>
+  <div class="form-group">
+    <label for="passwd">Client</label>
+    <input formControlName='passwd' type="text" class="form-control" id="passwd">
+    <div class="alert alert-danger" *ngIf="form.get('passwd').invalid && form.get('passwd').touched">champ invalid</div>
+  </div>
+
+
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -6,6 +6,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {CoderbaseUiModule} from '@coderbase/ui';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     CoderbaseUiModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ]
 })
 export class UiModule { }

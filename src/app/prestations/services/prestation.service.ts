@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, observable, Subject } from 'rxjs';
+import { Observable, observable, Subject, BehaviorSubject } from 'rxjs';
 import { PrestationI } from 'src/app/shared/interfaces/prestation-i';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Prestation } from 'src/app/shared/models/prestation';
@@ -14,6 +14,7 @@ import { $ } from 'protractor';
 export class PrestationService {
   private pCollection$: Observable<Prestation[]>;
   private urlApi = environment.urlApi;
+  public firstPresta$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
   // example observables and unsubscribe()
   public obs$ = new Observable((observers) => {
     observers.next(['chris', 'antony', 'cedric']);
@@ -28,6 +29,9 @@ export class PrestationService {
   constructor(private http: HttpClient) {
     this.collection = this.http.get<Prestation[]>(`${this.urlApi}/prestations`).pipe(
       map((tab) => {
+        if(tab.length > 0) {
+          this.firstPresta$.next(tab[0]);
+        }
         return tab.map((obj) => {
           return new Prestation(obj);
         });
@@ -42,15 +46,21 @@ export class PrestationService {
   public set collection(col: Observable<Prestation[]>) {
     this.pCollection$ = col;
   }
-// update collection
-public update(item: Prestation, state: State) {
+// update item in collection
+public update(item: Prestation, state?: State) {
   const obj = {...item};
-  obj.state = state;
+  if (state) {
+    obj.state = state;
+  }
   return this.http.patch(`${this.urlApi}/prestations/${item.id}`, obj);
 }
 
 public add(item: Prestation){
   return this.http.post(`${this.urlApi}/prestations`, item);
+}
+
+public getItemById(id: any): Observable<Prestation> {
+  return this.http.get<Prestation>(`${this.urlApi}/prestations/${id}`);
 }
 
 /* this.obs2$.subscribe((data) => {

@@ -8,5 +8,6 @@ export interface PrestationI {
   nbJour: number;
   totalHt(): number;
   totalTtc(): number;
+  comments: string;
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Login } from 'src/app/shared/models/login';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-login',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageLoginComponent implements OnInit {
 
-  constructor() { }
+  public title: string;
+  public subtitle: string;
+  public init = new Login();
+
+
+  constructor(
+    //private ps: LoginService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
   }

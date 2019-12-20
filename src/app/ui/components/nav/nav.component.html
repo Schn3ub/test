@@ -1,11 +1,14 @@
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link " routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" routerLink="/prestations" routerLinkActive="active">Prestations</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" routerLink="/clients" routerLinkActive="active">Clients</a>
+  </li>
+  <li class="nav-item">
+    <button (click)="upgradeVersion()">++ version</button>
   </li>
 </ul>
